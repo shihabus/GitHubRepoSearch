@@ -22,6 +22,7 @@ class SearchBar extends Component {
                     underlineColorAndroid={'transparent'}
                     onChangeText={query => this.setState({ query })}
                     value={this.state.query}
+                    autoCorrect={false}
                 />
                 {
                     this.props.showClearFetch &&

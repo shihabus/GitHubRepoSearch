@@ -30,7 +30,7 @@ class Results extends Component {
                             <Text style={styles.descriptionTxT}> {item.forks_count}</Text>
                         </View>
                         <View style={[styles.repoDetails, { paddingLeft: 15, justifyContent: 'center' }]}>
-                            <Octicons name="primitive-dot" size={28} color="#676E75" />
+                            <Octicons name="primitive-dot" size={28} color="#676E75"/>
                             <Text style={styles.descriptionTxT}> {item.language || '--'}</Text>
                         </View>
                     </View>
@@ -49,11 +49,11 @@ class Results extends Component {
         return (
             <View style={styles.container}>
                 <FlatList
+                    showsVerticalScrollIndicator={false}
                     data={this.props.data}
                     renderItem={({ item }) => this._renderItem(item)}
                     keyExtractor={item => item.id}
-                    ListEmptyComponent={this.ListEmptyComponent}
-                />
+                    ListEmptyComponent={this.ListEmptyComponent}/>
             </View>
         )
     }
@@ -90,7 +90,9 @@ const styles = StyleSheet.create({
         paddingHorizontal: 5,
     },
     repoDetails: {
-        flexDirection: 'row'
+        flexDirection: 'row',
+        justifyContent:'center',
+        alignItems:'center'
     },
     repoNameTxt: {
         fontSize: 18,
@@ -108,5 +110,6 @@ const styles = StyleSheet.create({
     },
     descriptionTxT: {
         fontSize: 18,
+        textAlignVertical:'center'
     },
 })
