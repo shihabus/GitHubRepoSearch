@@ -1,6 +1,6 @@
 # GitHub Repo Search in React Native
 
-A React Native app for finding GitHub user repositories.
+A React Native app for finding GitHub user repositories. I am using [GitHub's developer API's](https://developer.github.com/v3/).
 
 [Screen record](https://youtu.be/CXKBOzjeGGs)
 
